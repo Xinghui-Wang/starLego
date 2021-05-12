@@ -30,7 +30,7 @@ $alert-colors: (
 
 @each $type, $color in $alert-colors {
   .sl-alert-#{$type} {
-    @include alert-style($color, darken($color, 5%), $white);
+    @include alert-style(lighten($color, 25%) , $color, darken($color, 15%));
   }
 }
 
