@@ -8,7 +8,7 @@ export enum AlertType {
   Warning = 'warning',
 }
 
-interface AlertProps {
+export interface AlertProps {
   title: string;
   description?: string;
   type?: AlertType;
@@ -51,3 +51,5 @@ Alert.defaultProps = {
   type: AlertType.Default,
   closeable: false,
 }
+
+export default Alert;
