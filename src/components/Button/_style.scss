@@ -17,6 +17,7 @@
     cursor: not-allowed;
     opacity: $btn-disabled-opacity;
     box-shadow: none;
+    color: $btn-link-disabled-color !important;
     > * {
       pointer-events: none;
     }

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button, ButtonSize, ButtonType } from './components/Button/button'
 import { Alert, AlertType } from './components/Alert/alert';
+import Menu from './components/Menu/menu';
+import MenuItem from './components/Menu/menuItem';
 
 function App() {
   return (
@@ -17,6 +19,12 @@ function App() {
         <Alert title="Danger Alert closeable" type={AlertType.Danger} closeable />
         <Alert title="Warning Alert" type={AlertType.Warning} />
         <Alert title="Success Alert closeable" description="This is description." type={AlertType.Success} closeable />
+        <hr />
+        <Menu defaultIndex={0} mode="vertical">
+          <MenuItem index={0}>menu 1</MenuItem>
+          <MenuItem index={1} disabled>menu 2</MenuItem>
+          <MenuItem index={2}>menu 3</MenuItem>
+        </Menu>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
