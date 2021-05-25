@@ -3,6 +3,7 @@ import { Button, ButtonSize, ButtonType } from './components/Button/button'
 import { Alert, AlertType } from './components/Alert/alert';
 import Menu from './components/Menu/menu';
 import MenuItem from './components/Menu/menuItem';
+import SubMenu from './components/Menu/subMenu';
 
 function App() {
   return (
@@ -20,10 +21,23 @@ function App() {
         <Alert title="Warning Alert" type={AlertType.Warning} />
         <Alert title="Success Alert closeable" description="This is description." type={AlertType.Success} closeable />
         <hr />
-        <Menu defaultIndex={0} mode="vertical">
-          <MenuItem index={0}>menu 1</MenuItem>
-          <MenuItem index={1} disabled>menu 2</MenuItem>
-          <MenuItem index={2}>menu 3</MenuItem>
+        <Menu defaultIndex="0">
+          <MenuItem>menu 1</MenuItem>
+          <MenuItem disabled>menu 2</MenuItem>
+          <SubMenu title="submenu title">
+            <MenuItem>dropdown 1</MenuItem>
+            <MenuItem>dropdown 2</MenuItem>
+          </SubMenu>
+          <MenuItem>menu 3</MenuItem>
+        </Menu>
+        <Menu defaultIndex="0" mode="vertical">
+          <MenuItem>menu 1</MenuItem>
+          <MenuItem disabled>menu 2</MenuItem>
+          <SubMenu title="submenu title">
+            <MenuItem>dropdown 1</MenuItem>
+            <MenuItem>dropdown 2</MenuItem>
+          </SubMenu>
+          <MenuItem>menu 3</MenuItem>
         </Menu>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.

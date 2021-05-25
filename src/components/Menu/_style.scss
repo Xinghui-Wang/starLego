@@ -23,6 +23,46 @@
       cursor: default;
     }
   }
+  .sl-sub-menu-item {
+    position: relative;
+    .sl-sub-menu-title {
+      display: flex;
+      align-items: center;
+    }
+    .sl-sub-menu {
+      display: none;
+      list-style:none;
+      padding-left: 0;
+      white-space: nowrap;
+      .sl-menu-item {
+        padding: $menu-item-padding-y $menu-item-padding-x;
+        cursor: pointer;
+        transition: $menu-transition;
+        color: $body-color;
+        &.sl-active-menu-item, &:hover {
+          color: $menu-item-active-color !important;
+        }
+      }
+    }
+    .sl-sub-menu.sl-sub-menu-opened {
+      display: block;
+    }
+  }
+}
+
+.sl-menu-horizontal {
+  >.sl-menu-item {
+    border-bottom: $menu-item-active-border-width solid transparent;
+  }
+  .sl-sub-menu {
+    position: absolute;
+    background: $white;
+    z-index: 100;
+    top: calc(100% + 8px);
+    left: 0;
+    border: $menu-border-width solid $menu-border-color;
+    box-shadow: $submenu-box-shadow;
+  }
 }
 
 .sl-menu-vertical {
