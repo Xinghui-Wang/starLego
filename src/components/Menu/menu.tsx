@@ -28,7 +28,7 @@ export const Menu: React.FC<MenuProps> = (props) => {
   const [currActiveIndex, setActive] = useState(defaultIndex);
   const handleSelect = (index: string) => {
     setActive(index);
-    alert(index);
+    console.log(index);   
     if(onSelect) {
       onSelect(index);
     }
