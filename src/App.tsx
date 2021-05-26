@@ -30,7 +30,7 @@ function App() {
           </SubMenu>
           <MenuItem>menu 3</MenuItem>
         </Menu>
-        <Menu defaultIndex="0" mode="vertical">
+        <Menu defaultIndex="0" mode="vertical" defaultOpenSubMenus={['2']}>
           <MenuItem>menu 1</MenuItem>
           <MenuItem disabled>menu 2</MenuItem>
           <SubMenu title="submenu title">
