@@ -4,6 +4,8 @@ import { Alert, AlertType } from './components/Alert/alert';
 import Menu from './components/Menu/menu';
 import MenuItem from './components/Menu/menuItem';
 import SubMenu from './components/Menu/subMenu';
+import Tabs from './components/Tabs/tabs';
+import TabItem from './components/Tabs/tabItem';
 
 function App() {
   return (
@@ -39,6 +41,30 @@ function App() {
           </SubMenu>
           <MenuItem>menu 3</MenuItem>
         </Menu>
+        <hr />
+        <Tabs>
+          <TabItem label={<Button size={ButtonSize.Small}>Default Small</Button>}>
+            This is tab1 content.
+          </TabItem>
+          <TabItem label="tab2">
+            This is tab2 content.
+            <Button onClick={() => {console.log('123')}} size={ButtonSize.Small}>Default Small</Button>
+          </TabItem>
+          <TabItem label="tab3" disabled>
+            This is tab3 content.
+          </TabItem>
+        </Tabs>
+        <Tabs type="card">
+          <TabItem label="tab1">
+            This is tab1 content.
+          </TabItem>
+          <TabItem label="tab2">
+            This is tab2 content.
+          </TabItem>
+          <TabItem label="tab3" disabled>
+            This is tab3 content.
+          </TabItem>
+        </Tabs>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
