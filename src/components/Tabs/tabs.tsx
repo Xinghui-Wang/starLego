@@ -5,7 +5,7 @@ import { TabItemProps } from './tabItem';
 
 type TabsType = 'line' | 'card';
 
-interface TabsProps {
+export interface TabsProps {
   defaultIndex ?: number;
   className?: string;
   onSelect?: (selecedIndex: number) => void;
