@@ -6,11 +6,16 @@ import MenuItem from './components/Menu/menuItem';
 import SubMenu from './components/Menu/subMenu';
 import Tabs from './components/Tabs/tabs';
 import TabItem from './components/Tabs/tabItem';
+import Icon from './components/Icon/icon';
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+library.add(fas);
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Icon icon='arrow-down' size="5x" />
         <Button onClick={() => {console.log('123')}} size={ButtonSize.Small}>Default Small</Button>
         <Button size={ButtonSize.Large} btnType={ButtonType.Primary}>Primary Large</Button>
         <Button btnType={ButtonType.Danger}>Danger</Button>
